@@ -8,7 +8,7 @@ function http() {
        })
  
        app.get('/inventario/:id_pro/', function(solicitud, response) {
-          db.seleccionarId(solicitud.params.id, response);
+          db.seleccionarId(solicitud.params.id_pro, response);
        })
  
        app.post('/inventario/', function(solicitud, response) {
@@ -20,7 +20,7 @@ function http() {
        })
  
        app.delete('/inventario/:id_pro/', function(solicitud, response) {
-          db.borrar(solicitud.params.id, response);
+          db.borrar(solicitud.params.id_pro, response);
        })
     }  
  }

@@ -15,9 +15,9 @@ function MetodosDB() {
        }) 
     }
  
-    this.seleccionarId = function(id, response) {
+    this.seleccionarId = function(id_pro, response) {
        conexion.obtener(function(er, qr) {
-          qr.query('select * from inventario where id_pro=?',id, function(error, result) {
+          qr.query('select * from inventario where id_pro=?',id_pro, function(error, result) {
              qr.release();
              if (error) {
                 response.send({ status: 'Error'});
@@ -43,7 +43,7 @@ function MetodosDB() {
  
     this.actualizar = function(data, response) {
        conexion.obtener(function(er, qr) {
-          qr.query('update inventario set ? where id_pro = ?', [data, data.id], function(error, result){
+          qr.query('update inventario set ? where id_pro = ?', [data, data.id_pro], function(error, result){
              qr.release();
              if (error) {
                 response.send({ status: 'Error' });
@@ -54,9 +54,9 @@ function MetodosDB() {
        })
     }
  
-    this.borrar = function(id, response) {
+    this.borrar = function(id_pro, response) {
        conexion.obtener(function(er, qr) {
-          qr.query('delete from inventario where id_pro = ?', id, function(error, result) {
+          qr.query('delete from inventario where id_pro = ?', id_pro, function(error, result) {
              qr.release();
              if (error) {
                 response.send({ status: 'Error' });
