@@ -1,9 +1,8 @@
 node_modules
 
-prueba
+prueba/!/cocoa
 
-# Pero incluye el fichero superignore de la ignorado
-!/cocoa
 
-# Pero incluye todos los archivos o directorios dentro de la carpeta app/composer relativa al fichero `.gitignore` recursivamente.
-!prueba/cocoa
+
+
+#!prueba/cocoa
