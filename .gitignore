@@ -1,3 +1,6 @@
 node_modules
 
-pipi/!pipisote
+  /*pipi
+     !/pipisote
+     /pipisote/*
+     !/pipi/pipisote
