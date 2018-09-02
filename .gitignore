@@ -1,3 +1,4 @@
 node_modules
 
-*ignorado/!superignore/*
+ignorado/!superignore.js
+
